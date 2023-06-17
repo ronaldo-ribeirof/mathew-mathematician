@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- HTML -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Calculando</title>
+    <style>
+        /* CSS */
+        body {
+            font: normal 18pt Arial;
+        }
+
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+
+        div#res {
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 2px;
+            min-width: 140pt;
+            max-width: max-content;
+            min-height: 22pt;
+            height: 3pt;
+            border: 1px solid black;
+            padding-left: 5px;
+            padding-right: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HTML -->
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <p>
+        <input type="number" name="txtn1" id="txtn1">
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Resetar" onclick="resetar()">
+    </p>
+    <p>
+        <input type="button" value="+" onclick="somar()">
+        <input type="button" value="-" onclick="subtrair()">
+        <input type="button" value="*" onclick="multiplicar()">
+        <input type="button" value="/" onclick="dividir()">
+    </p>
+    <hr>
+    <h2>Resultado: </h2>
+    <div id="res"></div>
+    <script>
+        /* JavaScript */
+        let txtn1 = window.document.getElementById('txtn1')
+        let txtn2 = window.document.querySelector('input#txtn2')
+
+        function somar() {
+            let res = window.document.getElementById('res')
+            let n1 = Number(txtn1.value)
+            let n2 = Number(txtn2.value)
+            let s = n1 + n2
+            res.innerHTML = (`${s}`)
+        }
+
+        function subtrair() {
+            let res = window.document.getElementById('res')
+            let n1 = Number(txtn1.value)
+            let n2 = Number(txtn2.value)
+            let s = n1 - n2
+            res.innerHTML = (`${s}`)
+        }
+
+        function multiplicar() {
+            let res = window.document.getElementById('res')
+            let n1 = Number(txtn1.value)
+            let n2 = Number(txtn2.value)
+            let s = n1 * n2
+            res.innerHTML = (`${s}`)
+        }
+
+        function dividir() {
+            let res = window.document.getElementById('res')
+            let n1 = Number(txtn1.value)
+            let n2 = Number(txtn2.value)
+            let s = n1 / n2
+            res.innerHTML = (`${s}`)
+        }
+
+        function resetar() {
+            let res = window.document.getElementById('res')
+            let n1 = Number(txtn1.value)
+            let n2 = Number(txtn2.value)
+            res.innerHTML = ('')
+            txtn1.value = ''
+            txtn2.value = ''
+        }
+    </script>
+</body>
+</html>
