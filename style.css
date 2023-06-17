@@ -1,0 +1,22 @@
+body {
+            font: normal 18pt Arial;
+        }
+
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+
+        div#res {
+            margin-top: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 2px;
+            min-width: 140pt;
+            max-width: max-content;
+            min-height: 22pt;
+            height: 3pt;
+            border: 1px solid black;
+            padding-left: 5px;
+            padding-right: 5px;
+            text-align: center;
+        }
